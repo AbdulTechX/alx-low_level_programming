@@ -7,11 +7,13 @@
  */
 int main(void)
 {
-	char ch = 122;
+	int a;
+	char i;
 
-	for (ch = 122; ch >= 97; ch--)
-		putchar(ch);
+	for (a = 48; a <= 57; a++)
+		putchar(a);
+	for (i = 97; i <= 102; i++)
+		putchar(i);
 	putchar('\n');
-
 	return (0);
 }
