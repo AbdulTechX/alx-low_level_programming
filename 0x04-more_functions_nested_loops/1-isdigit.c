@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _idigit - Write a function that checks for uppercase character.
+ * _isdigit - Write a function that checks for uppercase character.
  *
  * @c: number to be checked
  *
