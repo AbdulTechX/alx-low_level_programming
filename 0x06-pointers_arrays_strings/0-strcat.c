@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** _strcat - Write a function that concatenates two strings.
+/**
+ * _strcat - Write a function that concatenates two strings.
  * @dest: the pointer where the strings is concatenates to.
  * @src: The source of the two strings.
  *
@@ -17,6 +18,6 @@ char *_strcat(char *dest, char *src)
 	for (i = 0;  src[i] != '\0'; i++)
 		srclen++;
 	for (i = 0; i <= srclen; i++)
-		dest[destlen + i] = src [i];
+		dest[destlen + i] = src[i];
 	return (dest);
 }
