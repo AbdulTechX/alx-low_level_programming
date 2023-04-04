@@ -16,15 +16,15 @@ Header File 📁
 
 Prototype
 
-char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept);
-char *_strstr(char *haystack, char *needle);
-void print_chessboard(char (*a)[8]);
-void print_diagsums(int *a, int size);
-void set_string(char **s, char *to);
+1. char *_memset(char *s, char b, unsigned int n);
+2. char *_memcpy(char *dest, char *src, unsigned int n);
+3. char *_strchr(char *s, char c);
+4. unsigned int _strspn(char *s, char *accept);
+5. char *_strpbrk(char *s, char *accept);
+6. char *_strstr(char *haystack, char *needle);
+7. void print_chessboard(char (*a)[8]);
+8. void print_diagsums(int *a, int size);
+9. void set_string(char **s, char *to);
 
 Tasks 📃
 
