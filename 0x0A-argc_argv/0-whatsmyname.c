@@ -3,7 +3,7 @@
 /**
  * main - Write a program that prints its name, followed by a new line.
  * @argc: The number of arguments supplied to the program
- * @agrv: an array of pointer to the arguements.
+ * @argv: an array of pointer to the arguements.
  * Return: Always 0
  */
 int main(int __attribute__((unused)) argc, char *argv[])
