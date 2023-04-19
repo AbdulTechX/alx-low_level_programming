@@ -4,7 +4,7 @@
  * array_iterator - Write a function that executes a function given as a
  * parameter on each element of an array.
  * @array: array of pointers
- * @size_t size: size of array.
+ * @size: size of array.
  * @action: pointer to the functiom we need to use.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
