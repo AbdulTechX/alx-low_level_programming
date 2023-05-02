@@ -1,17 +1,18 @@
 #include "lists.h"
 
-void free_listp(listp_t **head);
+void free_listp2(listp_t **head);
 size_t print_listint_safe(const listint_t *head);
 
 /**
- * free_listp - free a linked list
+ * free_listp2 - free a linked list
  * @head: pointer to the head of the list.
  *
  */
-void free_listp(listp_t **head)
+void free_listp2(listp_t **head)
 {
 	listp_t *temp;
 	listp_t *current;
+
 
 	if (head != NULL)
 	{
@@ -26,23 +27,25 @@ void free_listp(listp_t **head)
 }
 
 /**
- * print_listint_safe - Write a function that prints a listint_t linked list
- * @head: pointer to a head of listint_t
- * Return: the number of nodes in the list.
+ * free_listint_safe - Write a function that frees a listint_t list.
+ * @h: head of the list
+ *
+ * Return: size of the list that will be freed.
  */
-size_t print_listint_safe(const listint_t *head)
+size_t free_listint_safe(listint_t **h)
 {
 	size_t nodes = 0;
 	listp_t *head_node, *new_node, *add_node;
+	listint_t *tmp;
 
 	head_node = NULL;
-	while (head != NULL)
+	while (*h != NULL)
 	{
 		new_node = malloc(sizeof(listp_t));
 
 		if (new_node == NULL)
 			exit(98);
-		new_node->p = (void *)head;
+		new_node->p = (void *)*h;
 		new_node->next = head_node;
 		head_node = new_node;
 
@@ -51,19 +54,19 @@ size_t print_listint_safe(const listint_t *head)
 		while (add_node->next != NULL)
 		{
 			add_node = add_node->next;
-			if (head == add_node->p)
+			if (*h == add_node->p)
 			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listp(&head_node);
+				*h = NULL;
+				free_listp2(&head_node);
 				return (nodes);
 			}
 		}
-
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
+		tmp = *h;
+		*h = (*h)->next;
+		free(tmp);
 		nodes++;
 	}
-
-	free_listp(&head_node);
+	*h = NULL;
+	free_listp2(&head_node);
 	return (nodes);
 }
