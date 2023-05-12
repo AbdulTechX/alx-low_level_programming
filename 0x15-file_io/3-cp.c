@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-char *create_buffer(char * file);
+char *create_buffer(char *file);
 void clode_file(int fd);
 
 /**
@@ -14,7 +14,7 @@ char *create_buffer(char *file)
 {
 	char *buffer;
 
-	buffer = malloc (sizeof(char) * 1024);
+	buffer = malloc(sizeof(char) * 1024);
 
 	if (buffer == NULL)
 	{
